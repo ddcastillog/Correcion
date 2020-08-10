@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrección de la prueba de diagnóstico Nro. 2</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <script src="css/bootstrap/js/jquery.min.js"></script>
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+    <script src="css/bootstrap/js/popper.min.js"></script>
+    <script src="css/bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+
+    <style>
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #f1f1f1;
+            padding: 30px;
+            margin: 0px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        textarea {
+            width: 100%;
+            background-color: black;
+            color: #ffffff;
+            font-size: 16px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom" style="margin: 0px;">
+        <a href="#" class="navbar-brand">Datos</a>
+        <div class="collapse navbar-collapse" id="colapsado">
+            <ul class="navbar-nav">
+                <li class="nav-item" style="color: white; margin-right: 50px;">Nombre: Diego Castillo</li>
+                <li class="nav-item" style="color: white;margin-right: 50px;">Fecha: 10/08/2020</li>
+                <li class="nav-item" style="color: white;margin-right: 50px;">Curso: A</li>
+            </ul>
+        </div>
+    </nav>
+    <header style="text-align: center;">
+        <h1>Corrección de la prueba de diagnóstico Nro. 2</h1>
+    </header>
+    <div class="container" style="margin: 0px;">
+        <h2>Preguntas</h2>
+        <ul class="nav nav-pills nav-stacked col-md-3" id="scroll">
+            <li class="active"><a data-toggle="pill" href="#p1">1</a></li>
+        </ul>
+        <script>
+            var texto = "";
+            for (i = 2; i <= 40; i++) {
+                texto += "<li><a data-toggle='pill' href='#p" + i + "'>" + i + "</a></li>";
+            }
+            document.getElementById("scroll").innerHTML += texto;
+
+        </script>
+
+        <div class="tab-content col-md-9">
+            <div id="p1" class="tab-pane fade in active">
+                <p>1.¿Un &lt;iframe&gt; es utilizado para desplegar una página web dentro de otra página web?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Verdadero</li>
+                    <li class="list-group-item">Falso</li>
+                </ul>
+                <p>Ejemplo de &lt;iframe&gt; </p>
+                <textarea>&lt;iframe src="preguntas/pregunta1.html" width="40%" height="210" allowfullscreen&gt;&lt;/iframe&gt;</textarea><br />
+                <iframe src="preguntas/pregunta1.html" width="40%" height="210" allowfullscreen></iframe>
+            </div>
+            <div id="p2" class="tab-pane fade">
+                <p>2.¿Cuál es el elemento HTML correcto para insertar un salto de línea?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;break&gt;</li>
+                    <li class="list-group-item">&lt;lb&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;br&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;br&gt;</p>
+                <textarea>&lt;p&gt;Parrafo 1&lt;/p&gt;&lt;br/&gt;&lt;p&gt;Parrafo 2&lt;/p&gt;</textarea><br />
+                <p>Parrafo 1</p>
+                <br />
+                <p>Parrafo 2</p>
+            </div>
+            <div id="p3" class="tab-pane fade">
+                <p>3.¿Cómo se define una lista numerada?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;ul&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;ol&gt;</li>
+                    <li class="list-group-item">&lt;dl&gt;</li>
+                    <li class="list-group-item">&lt;list&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;ol&gt;</p>
+                <textarea>&lt;ol>&lt;li>item&lt;/li>&lt;li>item&lt;/li>&lt;/ol></textarea><br />
+                <ol>
+                    <li>item</li>
+                    <li>item</li>
+                </ol>
+            </div>
+            <div id="p4" class="tab-pane fade">
+                <p>4.¿Cuál es el elemento correcto para reproducir un archivo de video?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;media&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;video&gt;</li>
+                    <li class="list-group-item">&lt;movie&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;video&gt;</p>
+                <textarea>&lt;video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" width="40%">
+                    &lt;source src="preguntas/pregunta4.mp4" type="video/mp4">
+                    &lt;/video></textarea><br />
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" width="40%">
+                    <source src="preguntas/pregunta4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="p5" class="tab-pane fade">
+                <p>5.¿Quien define los estándares sobre la Web?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">World Wide Web Consortium</li>
+                    <li class="list-group-item">Mozilla</li>
+                    <li class="list-group-item">Google</li>
+                    <li class="list-group-item">Microsoft</li>
+                </ul>
+            </div>
+            <div id="p6" class="tab-pane fade">
+                <p>6.Seleccione el elemento HTML correcto para definir un texto importante:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;important&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;strong&gt;</li>
+                    <li class="list-group-item">&lt;i&gt;</li>
+                    <li class="list-group-item">&lt;b&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;strong&gt;</p>
+                <textarea>&lt;p>Texto &lt;strong>importante&lt;/strong>&lt;/p></textarea><br />
+                <p>Texto <strong>importante</strong></p>
+            </div>
+            <div id="p7" class="tab-pane fade">
+                <p>7..En HTML, cuál atributo es usado para especificar que un campo de entrada debe ser llenado?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">required</li>
+                    <li class="list-group-item">validate</li>
+                    <li class="list-group-item">formvalidate</li>
+                    <li class="list-group-item">placeholder</li>
+                </ul>
+                <p>Ejemplo de required</p>
+                <textarea>&lt;form>&lt;input type="text" name="texto" required>&lt;input type="submit" value="validar" class="btn btn-primary">&lt;/form></textarea><br />
+                <form>
+                    <input type="text" name="texto" required>
+                    <input type="submit" value="validar" class="btn btn-primary">
+                </form>
+            </div>
+            <div id="p8" class="tab-pane fade">
+                <p>8.¿Cuál es el HTML correcto para hacer un área de texto?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">&lt;textarea&gt;</li>
+                    <li class="list-group-item">&lt;input type="textbox"&gt;</li>
+                    <li class="list-group-item">&lt;input type="textarea"&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;textarea></p>
+                <textarea>&lt;textarea>Esto es un textarea&lt;/textarea></textarea><br />
+                <hr>
+                <textarea>Esto es un textarea</textarea>
+            </div>
+            <div id="p9" class="tab-pane fade">
+                <p>9.¿Los elementos de bloque normalmente se despliegan sin iniciar una nueva línea?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Verdadero</li>
+                    <li class="list-group-item list-group-item-success">Falso</li>
+                </ul>
+                <p>Ejemplo de bloque</p>
+                <textarea>&lt;h1>Titulo 1&lt;/h1>&lt;article>&lt;h5>Titulo 5&lt;/h5>&lt;p>Parrafo 1&lt;/p>&lt;/article></textarea><br />
+                <hr>
+                <h1>Titulo 1</h1>
+                <article>
+                    <h5>Titulo 5</h5>
+                    <p>Parrafo 1</p>
+                </article>
+            </div>
+            <div id="p10" class="tab-pane fade">
+                <p>10.¿Cuál caracter es el correcto para indicar una etiqueta de fin?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">/</li>
+                    <li class="list-group-item">^</li>
+                    <li class="list-group-item">&lt;</li>
+                    <li class="list-group-item">*</li>
+                </ul>
+                <p>Ejemplo de /</p>
+                <textarea>&lt;p>parrafo&lt;/p>&lt;br/></textarea><br />
+                <p>parrafo</p>
+                <br />
+            </div>
+            <div id="p11" class="tab-pane fade">
+                <p>11.¿Cuál elemento define enlaces de navegación?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">&lt;nav&gt;</li>
+                    <li class="list-group-item">&lt;navigate&gt;</li>
+                    <li class="list-group-item">&lt;navigation&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;nav&gt;</p>
+                <textarea>&lt;nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+                    &lt;a href="#" class="navbar-brand">Inicio &lt;/a>        
+                    &lt;div class="collapse navbar-collapse" id="colapsado">
+                    &lt;ul class="navbar-nav">
+                            &lt;li class="nav-item"> &lt;a href="#" clas="nav-link">Enlace 1 &lt;/a>&lt;/li>
+                            &lt;li class="nav-item"> &lt;a href="#" clas="nav-link">Enlace 2 &lt;/a> &lt;/li>                
+                    &lt;/ul>
+                    &lt;/div>
+                </nav></textarea><br />
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+                    <a href="#" class="navbar-brand">Inicio</a>
+                    <div class="collapse navbar-collapse" id="colapsado">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#" clas="nav-link">Enlace 1</a></li>
+                            <li class="nav-item"><a href="#" clas="nav-link">Enlace 2</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div id="p12" class="tab-pane fade">
+                <p>12.Gráficos definidos por SVG en qué formato están?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">CSS</li>
+                    <li class="list-group-item">HTML</li>
+                    <li class="list-group-item list-group-item-success">XML</li>
+                </ul>
+            </div>
+            <div id="p13" class="tab-pane fade">
+                <p>13.¿A qué corresponden las siglas HTML?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Hyper Text Markup Language</li>
+                    <li class="list-group-item">Hyperlinks and Text Markup Language</li>
+                    <li class="list-group-item">Home Tool Markup Language</li>
+                </ul>
+            </div>
+            <div id="p14" class="tab-pane fade">
+                <p>14.¿Cuál es el HTML correcto para hacer una lista desplegable?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;input type="list"&gt;</li>
+                    <li class="list-group-item">&lt;list&gt;</li>
+                    <li class="list-group-item">&lt;input type="dropdown"&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;select&gt;</li>
+                </ul>
+                <p>Ejemplo de lista deplegable</p>
+                <textarea>&lt;select>
+                    &lt;option value="1">opcion1&lt;/option>
+                    &lt;option value="2">opcion2&lt;/option>
+                    &lt;option value="3">opcion3&lt;/option>
+                    &lt;option value="4">opcion4&lt;/option>
+                    &lt;/select></textarea><br />
+                <select>
+                    <option value="1">opcion1</option>
+                    <option value="2">opcion2</option>
+                    <option value="3">opcion3</option>
+                    <option value="4">opcion4</option>
+                </select>
+            </div>
+            <div id="p15" class="tab-pane fade">
+                <p>15.¿Cual es la construcción HTML correcta para crear un hiperlink?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;a&gt;URL&lt; /a&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;a href="URL"&gt;UTN&lt; /a&gt;</li>
+                    <li class="list-group-item">&lt;name="URL"&gt;UTN&lt; /a&gt;</li>
+                    <li class="list-group-item">&lt; a url="URL"&gt;UTN&lt; /a&gt;</li>
+                </ul>
+                <p>Ejemplo de hiperlink</p>
+                <textarea>&lt;a href="preguntas/pregunta1.html" target="_blank">Vinculo&lt;/a></textarea><br />
+                <a href="preguntas/pregunta1.html" target="_blank">Vinculo</a>
+            </div>
+            <div id="p16" class="tab-pane fade">
+                <p>16.¿Cuál doctype es correcto para HTML5?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">&lt;!DOCTYPE html&gt;</li>
+                    <li class="list-group-item">&lt;!DOCTYPE HTML5&gt;</li>
+                    <li class="list-group-item">&lt;!DOCTYPE HTML PUBLIC "-/W3C/DTD HTML 5.0/EN" "ww3
+                        org/TR/html5/strict.dtd"&gt;</li>
+                </ul>
+            </div>
+            <div id="p17" class="tab-pane fade">
+                <p>17.En HTML, qué define el elemento
+                    &lt;aside&gt;?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Contenido que está "aparte" del contenido
+                        principal
+                        de la página.</li>
+                    <li class="list-group-item">Una lista de navegación que debe mostrarse en el lado izquierdo de la
+                        página.</li>
+                </ul>
+                <p>Ejemplo de &lt;aside&gt;</p>
+                <textarea>&lt;aside>&lt;p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugiat debitis quas neque tempora
+                        odit? Aliquid, dolor rerum ipsam quisquam fuga blanditiis similique cum harum culpa, magni nisi ullam pariatur.&lt;/p>
+                        &lt;/aside></textarea><br />
+                <aside>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugiat debitis quas neque tempora
+                        odit? Aliquid, dolor rerum ipsam quisquam fuga blanditiis similique cum harum culpa, magni nisi
+                        ullam pariatur.</p>
+                </aside>
+            </div>
+            <div id="p18" class="tab-pane fade">
+                <p>18.En HTML, onblur y onfocus son:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">elementos HTML</li>
+                    <li class="list-group-item list-group-item-success">atributos de evento</li>
+                    <li class="list-group-item">atributos de estilo</li>
+                </ul>
+                <p>Ejemplo de hiperlink</p>
+                <textarea></textarea><br />
+                <form>
+                    <input type="text" name="Nombre" id="nombre" onfocus="onfo(this)" onblur="onblu(this)">
+                </form>
+            </div>
+            <div id="p19" class="tab-pane fade">
+                <p>19.¿Cómo se define una lista con viñetas?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;ol&gt;</li>
+                    <li class="list-group-item">&lt;list&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;ul&gt;</li>
+                    <li class="list-group-item">&lt;dl&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;ul&gt;</p>
+                <textarea>&lt;ul>&lt;li>elemento 1 &lt;/li>&lt;li>elemento 2 &lt;/li>&lt;/ul></textarea><br />
+                <ul>
+                    <li>elemento 1</li>
+                    <li>elemento 2</li>
+                </ul>
+            </div>
+            <div id="p20" class="tab-pane fade">
+                <p>20.¿Cuál es la forma correcta para insertar una imagen de fondo?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">&lt;body
+                        style="background-image:url(background.gif)"&gt;</li>
+                    <li class="list-group-item">&lt;background img="background.gif&gt;</li>
+                    <li class="list-group-item">&lt;body bg="background.gif"&gt;</li>
+                </ul>
+                <p>Ejemplo de insertar una imagen de fondo</p>
+                <textarea>&lt;textarea style="background-image:url(preguntas/html.png); background-repeat: no-repeat; width:30%; background-color: white;height: 200px ;color: black;">&lt;/textarea></textarea><br />
+                <textarea
+                    style="background-image:url(preguntas/html.png); background-repeat: no-repeat; width:30%; background-color: white;height: 200px ; color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat minima deleniti corrupti ad labore ducimus? Expedita ab amet delectus? Eum iste pariatur saepe dignissimos odio tempore eveniet. Cumque, ipsum!</textarea>
+            </div>
+            <div id="p21" class="tab-pane fade">
+                <p>21.El atributo global "contenteditable" es usado para:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Especificar el menu contextual de un elemento. El menú aparece cuando el
+                        usuario hace click derecho en el elemento.</li>
+                    <li class="list-group-item">Actualizar contenido desde el servidor.</li>
+                    <li class="list-group-item">Retornar a la posición de la primera ocurrencia encontrada dentro del
+                        contenido de una cadena.</li>
+                    <li class="list-group-item list-group-item-success">Especifica si el contenido de un elemento podría
+                        ser
+                        editado o no.</li>
+                </ul>
+                <p>Ejemplo de contenteditable</p>
+                <textarea>&lt;label contenteditable="false">No puede editar&lt;/label>&lt;br/>
+                    &lt;label contenteditable="true">Puedes editar&lt;/label></textarea><br />
+                <label contenteditable="false">No puede editar</label><br />
+                <label contenteditable="true">Puedes editar</label>
+            </div>
+            <div id="p22" class="tab-pane fade">
+                <p>22.Los elementos en linea (inline) son normalmente desplegados sin iniciar una nueva línea?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Verdadero</li>
+                    <li class="list-group-item">Falso</li>
+                </ul>
+                <p>Ejemplo de elementos inline</p>
+                <textarea>&lt;a href="#">enlace&lt;/a>
+                    &lt;img src="preguntas/html.png">
+                    &lt;em>impotante&lt;/em>
+                    &lt;strong>impotante&lt;/strong></textarea><br />
+                <a href="#">enlace</a>
+                <img src="preguntas/html.png">
+                <em>impotante</em>
+                <strong>impotante</strong>
+            </div>
+            <div id="p23" class="tab-pane fade">
+                <p>23.Los comentarios HTML inician con &lt;!-- y terminan con --&gt; </p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Verdadero</li>
+                    <li class="list-group-item">Falso</li>
+                </ul>
+                <p>Ejemplo de comentarios</p>
+                <textarea>&lt;!--Este es un comentario--></textarea><br />
+                <!--Este es un comentario-->
+            </div>
+            <div id="p24" class="tab-pane fade">
+                <p>24.¿Cuál es el HTML correcto para insertar una imagen?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;image src="image.gif" alt="unaImagen"&gt;</li>
+                    <li class="list-group-item">&lt;img href="image.gif" alt="unaImagen"&gt;</li>
+                    <li class="list-group-item">&lt;img alt="miImagen"&gt;image.gif&lt;/img&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;img src="image.gif" alt="miImagen"&gt;</li>
+                </ul>
+                <p>Ejemplo de insertar una imagen</p>
+                <textarea>&lt;img src="preguntas/html.png" alt="imagen_html"></textarea><br />
+                <img src="preguntas/html.png" alt="imagen_html">
+            </div>
+            <div id="p25" class="tab-pane fade">
+                <p>25.¿Cual de estas etiquetas son correspondientes a los elementos de una tabla?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;thead&gt;&lt;body&gt;&lt;tr&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;table&gt;&lt;tr&gt;&lt;td&gt;</li>
+                    <li class="list-group-item">&lt;table&gt;&lt;head&gt;&lt;tfoot&gt;</li>
+                    <li class="list-group-item">&lt;table&gt;&lt;tr&gt;&lt;tt&gt;</li>
+                </ul>
+                <p>Ejemplo de insertar una tabla</p>
+                <textarea>&lt;table>
+                    &lt;tr>
+                    &lt;th>columna 1&lt;/th>
+                    &lt;th>columna 2&lt;/th>
+                    &lt;/tr>
+                    &lt;tr>
+                    &lt;td>fila 1&lt;/td>
+                    &lt;td>fila 1&lt;/td>
+                    &lt;/tr>
+                </table></textarea><br />
+                <table>
+                    <tr>
+                        <th>columna 1</th>
+                        <th>columna 2</th>
+                    </tr>
+                    <tr>
+                        <td>fila 1</td>
+                        <td>fila 1</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="p26" class="tab-pane fade">
+                <p>26.Seleccione el elemento HTML correcto para enfatizar un texto</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">&lt;em&gt;</li>
+                    <li class="list-group-item">&lt;i&gt;</li>
+                    <li class="list-group-item">&lt;italic&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;em&gt; </p>
+                <textarea>&lt;p>&lt;em>texto enfatizado&lt;/em>&lt;/p></textarea><br />
+                <p><em>texto enfatizado</em></p>
+            </div>
+            <div id="p27" class="tab-pane fade">
+                <p>27.¿Cuál es la opción correcta en HTML para adicionar un color de fondo?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;background&gt;yellow&lt;/background&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;body style="background-color:yellow;"&gt;
+                    </li>
+                    <li class="list-group-item">&lt;body bg="yellow"&gt;</li>
+                </ul>
+                <p>Ejemplo de insertar una imagen de fondo</p>
+                <textarea>&lt;textarea style="background-color:blue;color:white;">&lt;/textarea></textarea><br />
+                <textarea
+                    style="background-color:blue;color:white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat minima deleniti corrupti ad labore ducimus? Expedita ab amet delectus? Eum iste pariatur saepe dignissimos odio tempore eveniet. Cumque, ipsum!</textarea>
+
+            </div>
+            <div id="p28" class="tab-pane fade">
+                <p>28.Cuál elemento es utilizado para especificar la cabecera de un documento o sección?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;top&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;header&gt;</li>
+                    <li class="list-group-item">&lt;head&gt;</li>
+                    <li class="list-group-item">&lt;section&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;header&gt; </p>
+                <textarea>&lt;header style="text-align: center;">
+                    &lt;h1>Corrección de la prueba de diagnóstico Nro. 2&lt;/h1>
+                    &lt;/header></textarea><br />
+            </div>
+            <div id="p29" class="tab-pane fade">
+                <p>29.¿Cuál es el elemento HTML correcto para reproducir archivos de audio?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">&lt;audio&gt;</li>
+                    <li class="list-group-item">&lt;mp3&gt;</li>
+                    <li class="list-group-item">&lt;sound&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;audio&gt;</p>
+                <textarea>&lt;audio controls>
+                    &lt;source src="preguntas/pregunta29.mp3" type="audio/mp3">
+                        Tu navegador no soporta audio HTML5.
+                        &lt;/audio></textarea><br />
+                <audio controls>
+                    <source src="preguntas/pregunta29.mp3" type="audio/mp3">
+                    Tu navegador no soporta audio HTML5.
+                </audio>
+            </div>
+            <div id="p30" class="tab-pane fade">
+                <p>30.¿Cuál elemento HTML define el título de un documento?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">&lt;title&gt;</li>
+                    <li class="list-group-item">&lt;head&gt;</li>
+                    <li class="list-group-item">&lt;meta&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;title&gt; </p>
+                <textarea>&lt;title>Corrección de la prueba de diagnóstico Nro. 2&lt;/title></textarea><br />
+            </div>
+            <div id="p31" class="tab-pane fade">
+                <p>31.Seleccione el elemento HTML para el encabezado más grande posible:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;head&gt;</li>
+                    <li class="list-group-item">&lt;heading&gt;</li>
+                    <li class="list-group-item">&lt;h6&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;h1&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;h1&gt;</p>
+                <textarea>&lt;h1>Correcion de la prueba&lt;/h1></textarea><br />
+                <h1>Correcion de la prueba</h1>
+            </div>
+            <div id="p32" class="tab-pane fade">
+                <p>32.¿Cuál elemento es usado para especificar el pie de un documento o sección?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">&lt;footer&gt;</li>
+                    <li class="list-group-item">&lt;bottom&gt;</li>
+                    <li class="list-group-item">&lt;section&gt;</li>
+                </ul>
+                <p>Ejemplo de &lt;h1&gt;</p>
+                <textarea>&lt;footer>&lt;p>PIE DE PÁGINA&lt;/p>&lt;/footer></textarea><br />
+
+            </div>
+            <div id="p33" class="tab-pane fade">
+                <p>33.El elemento &lt;canvas&gt; es usado para:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Desplegar los registros de una base de datos.</li>
+                    <li class="list-group-item list-group-item-success">Dibujar gráficos.</li>
+                    <li class="list-group-item">Manipular datos en MySQL</li>
+                    <li class="list-group-item">Crear elementos que se puede arrastrar.</li>
+                </ul>
+                <p>Ejemplo de &lt;canvas&gt;</p>
+                <textarea>&lt;canvas width="300" height="300" id="area_de_dibujo">&lt;/canvas></textarea><br />
+                <canvas width="300" height="300" id="area_de_dibujo"></canvas>
+            </div>
+            <div id="p34" class="tab-pane fade">
+                <p>34.Cuál tipo de entrada define un control de desplazamiento?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">search</li>
+                    <li class="list-group-item list-group-item-success">range</li>
+                    <li class="list-group-item">slider</li>
+                    <li class="list-group-item">controls</li>
+                </ul>
+                <p>Ejemplo de range</p>
+                <textarea>&ltinput type="range" min="0" max="100"></textarea><br />
+                <input type="range" min="0" max="100">                
+                
+            </div>
+            <div id="p35" class="tab-pane fade">
+                <p>35.¿Cómo se puede abrir un link en una nueva pestaña/ventana de navegador?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;a href="url" new&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;a href="url" target="_blank"&gt;</li>
+                    <li class="list-group-item">&lt;a href="url" target="new"&gt;</li>
+                </ul>
+                <p>Ejemplo de una nueva pestaña</p>
+                <textarea>&lt;a href="preguntas/pregunta1.html" target="_blank">Nueva pestana&lt;/a></textarea><br />
+                <a href="preguntas/pregunta1.html" target="_blank">Nueva pestana</a>
+            </div>
+            <div id="p36" class="tab-pane fade">
+                <p>36.¿Cual es la forma HTML correcta para hacer una casilla de verificación?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;checkbox&gt;</li>
+                    <li class="list-group-item">&lt;check&gt;</li>
+                    <li class="list-group-item">&lt;input type="check"&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;input type="checkbox"&gt;</li>
+                </ul>
+                <p>Ejemplo de una nueva pestaña</p>
+                <textarea>&lt;p><input type="checkbox"> Opcion 1&lt;/p>
+                    &lt;p>&lt;input type="checkbox"> Opcion 2&lt;/p></textarea><br />
+                <p><input type="checkbox"> Opcion 1</p>
+                <p><input type="checkbox"> Opcion 2</p>
+            </div>
+            <div id="p37" class="tab-pane fade">
+                <p>37.En HTML, se puede insertar un elemento SVG directamente dentro de una página HTML?</p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Verdadero</li>
+                    <li class="list-group-item">Falso</li>
+                </ul>
+                <p>Ejemplo de SVG</p>
+                <textarea>&lt;img width="100" height="100" src="preguntas/pregunta37.svg"/></textarea><br />
+                <img width="100" height="100" src="preguntas/pregunta37.svg"/>
+            </div>
+            <div id="p38" class="tab-pane fade">
+                <p>38.¿Cuál atributo HTML especifica el texto alternativo para una imagen, si la imagen no puede
+                    desplegarse?
+                </p>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">alt</li>
+                    <li class="list-group-item">src</li>
+                    <li class="list-group-item">longdesc</li>
+                    <li class="list-group-item">title</li>
+                </ul>
+                <p>Ejemplo de alt</p>
+                <textarea>&lt;img src="preguntas/html.pn" alt="imagen_html"></textarea><br />
+                <img src="preguntas/html.pn" alt="imagen_html">
+            </div>
+            <div id="p39" class="tab-pane fade">
+                <p>39.¿Cuál elemento HTML es usado para desplegar una medida escalar dentro de un rango?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;gauge&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;meter&gt;</li>
+                    <li class="list-group-item">&lt;range&gt;</li>
+                    <li class="list-group-item">&lt;measure&gt;</li>
+                </ul>
+                <p>Ejemplo de alt</p>
+                <textarea>&lt;meter min="100" max="5000"  value="2154">&lt;/meter></textarea><br />               
+                <meter min="100" max="5000"  value="2154"></meter>
+            </div>
+            <div id="p40" class="tab-pane fade">
+                <p>40.¿Cuál es el HTML correcto para hacer un cuadro de texto?</p>
+                <ul class="list-group">
+                    <li class="list-group-item">&lt;textfield&gt;</li>
+                    <li class="list-group-item">&lt;input type="textfield"&gt;</li>
+                    <li class="list-group-item">&lt;textinput type="text"&gt;</li>
+                    <li class="list-group-item list-group-item-success">&lt;input type="text"&gt;</li>
+                </ul>
+                <p>Ejemplo de un cuadro de texto</p>
+                <textarea>>&lt;input type="text"></textarea><br />
+                <input type="text">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>PIE DE PÁGINA</p>
+    </footer>
+    <script src="css/bootstrap/js/eventos.js"></script>
+</body>
+
+</html>
